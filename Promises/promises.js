@@ -101,7 +101,7 @@ readFileExample();
 //=============================//
 //Static method of promises:-
 
-//Promise.all(iterable): Waits for all promises to resolve.
+//Promise.all(iterable): Waits for all promises to resolve. if promise 
 
 const promise1 = Promise.resolve("First promise resolved");
 const promise2 = Promise.resolve("Second promise resolved");

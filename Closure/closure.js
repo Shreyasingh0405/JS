@@ -8,9 +8,11 @@
 
 function a() {
     var b = 190
+    var m =87
     c()
     function c() {
         console.log(b)
+        console.log(m)
     }
 }
 a()
@@ -26,3 +28,13 @@ Maintaining State: Track and manage state across function calls.
 Event Handlers and Callbacks: Maintain access to variables in event handlers and callbacks.
 
 */
+
+function check() {
+    const y = 89
+function reCheck() {
+        console.log(y)
+    }
+    return reCheck
+}
+const ggg=check()
+ggg()

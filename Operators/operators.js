@@ -129,7 +129,7 @@ console.log('Zero-fill right shift:', zeroFillRightShift);  // Output: 214748364
 
 // 6. Conditional (Ternary) Operator
 // Conditional (`? :`): Short-hand for an `if-else` statement.
-let canVote = (18 >= 18) ? 'Yes' : 'No';
+let canVote = (8 >= 18) ? 'Yes' : 'No';
 console.log('Can vote:', canVote);  // Output: Yes
 
 // 7. Type Operators
