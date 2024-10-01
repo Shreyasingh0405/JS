@@ -1,10 +1,7 @@
 
 // switch statement:The switch statement in JavaScript is used to execute one block of code among many options based on the value of an expression. It is particularly useful when you need to compare a single variable or expression against multiple values and execute different code blocks based on which value it matches.
 
- 
-
-
-// let day = 7; 
+ // let day = 7; 
 
 
 // if(day === 0){

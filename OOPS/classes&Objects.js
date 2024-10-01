@@ -47,3 +47,15 @@ class man{
 }
 const data = new man("shree",2.5)
 console.log(data.manData());
+
+class check{
+  constructor(work,process){
+    this.work=work
+    this.process=process
+  }
+  getwork(){
+    return(`${this.work} ${this.process}`)
+  }
+}
+const obj=new check("heavy","high")
+console.log(obj.getwork())

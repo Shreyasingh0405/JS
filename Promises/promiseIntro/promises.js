@@ -23,38 +23,38 @@
 
 // Example of using a Promise:
 
-let promise = new Promise(function(resolve, reject) {
-    // Simulating an asynchronous operation
-    let success = true; // This is just an example condition
-    if (success) {
-      resolve("Operation succeeded!");
-    } else {
-      reject("Operation failed.");
-    }
-  });
-  
-  promise
-    .then(function(result) {
-      console.log(result); // "Operation succeeded!"
-    })
-    .catch(function(error) {
-      console.error(error); // If operation failed, this will run
-    })
-    .finally(function() {
-      console.log("Operation completed."); // Always runs, regardless of success or failure
-  });
-  
-  /*
-    Benefits of Using Promises:
-    - Avoiding Callback Hell: Promises allow you to handle asynchronous code in a more linear fashion, avoiding deeply nested callbacks.
-    - Error Handling: With promises, you can handle errors more gracefully using .catch().
-    - Readability: Promises make code easier to read and maintain, 
-      especially when dealing with multiple asynchronous operations.
-  */
-  
-      //===================**********************========================//
+let promise = new Promise(function (resolve, reject) {
+  // Simulating an asynchronous operation
+  let success = true; // This is just an example condition
+  if (success) {
+    resolve("Operation succeeded!");
+  } else {
+    reject("Operation failed.");
+  }
+});
 
-      // Example of Using `promisify` in Node.js
+promise
+  .then(function (result) {
+    console.log(result); // "Operation succeeded!"
+  })
+  .catch(function (error) {
+    console.error(error); // If operation failed, this will run
+  })
+  .finally(function () {
+    console.log("Operation completed."); // Always runs, regardless of success or failure
+  });
+
+/*
+  Benefits of Using Promises:
+  - Avoiding Callback Hell: Promises allow you to handle asynchronous code in a more linear fashion, avoiding deeply nested callbacks.
+  - Error Handling: With promises, you can handle errors more gracefully using .catch().
+  - Readability: Promises make code easier to read and maintain, 
+    especially when dealing with multiple asynchronous operations.
+*/
+
+//===================**********************========================//
+
+// Example of Using `promisify` in Node.js
 // ----------------------------------------
 
 // Import the required modules
@@ -86,7 +86,7 @@ async function readFileExample() {
   try {
     // Await the result of the readFileAsync Promise
     const data = await readFileAsync('example.txt', 'utf8');
-    
+
     // Output the file content
     console.log(data);
   } catch (err) {
@@ -108,10 +108,9 @@ const promise2 = Promise.resolve("Second promise resolved");
 const promise3 = new Promise((resolve, reject) => {
   setTimeout(resolve, 1000, "Third promise resolved after 1 second");
 });
-
 Promise.all([promise1, promise2, promise3])
   .then((results) => {
-    console.log(results); 
+    console.log(results);
     // Output: ["First promise resolved", "Second promise resolved", "Third promise resolved after 1 second"]
   })
   .catch((error) => {
@@ -127,7 +126,7 @@ const promises3 = new Promise((resolve, reject) => {
 
 Promise.allSettled([promises1, promises2, promises3])
   .then((results) => {
-    console.log(results); 
+    console.log(results);
     // Output:
     // [
     //   { status: "fulfilled", value: "First promise resolved" },
@@ -145,7 +144,7 @@ const promise33 = new Promise((resolve, reject) => {
 
 Promise.any([promise11, promise22, promise33])
   .then((result) => {
-    console.log(result); 
+    console.log(result);
     // Output: "Second promise resolved" (because it fulfills first)
   })
   .catch((error) => {
@@ -156,19 +155,19 @@ Promise.any([promise11, promise22, promise33])
 const resolvedPromise = Promise.resolve("This promise is resolved immediately");
 
 resolvedPromise.then((result) => {
-  console.log(result); 
+  console.log(result);
   // Output: "This promise is resolved immediately"
 });
 
 //Promise.reject(reason): Returns a rejected promise with the given reason.
 
 const rejectedPromise = Promise.reject("This promise is rejected immediately");
-
 rejectedPromise.catch((error) => {
-  console.error(error); 
-  // Output: "This promise is rejected immediately"
+  console.error(error);
+// Output: "This promise is rejected immediately"
 });
 
 //=========================================================================
 
 //The Promise constructor is used to create new promise objects.
+

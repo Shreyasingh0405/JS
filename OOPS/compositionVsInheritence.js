@@ -28,6 +28,23 @@ class Animal {
   dog.speak(); // Rex makes a noise.
   dog.bark();  // Rex barks.
   
+
+  class check{
+    constructor(work){
+      this.work = work;
+    }
+    workCheck(){
+      console.log(`${this.work} done`)
+    }
+  }
+  class heavy extends check{
+    pressure(){
+      console.log(`${this.work}need to handle`)
+    }
+  }
+  const final= new heavy("checking")
+  final.workCheck();
+  final.pressure()
   /*
   In this example, Dog inherits from Animal. 
   Dog is a type of Animal and gains all properties and methods of Animal.
