@@ -1,5 +1,6 @@
 /*
-The event loop is a core concept in JavaScript that enables asynchronous programming, allowing JavaScript to perform non-blocking operations—even though it’s single-threaded. This means that JavaScript can handle multiple operations concurrently, without being held up by slow-running tasks like file I/O, network requests, or time-consuming computations.
+The event loop is a core concept in JavaScript that enables asynchronous programming, allowing JavaScript to perform non-blocking operations—even though it’s single-threaded. 
+This means that JavaScript can handle multiple operations concurrently, without being held up by slow-running tasks like file I/O, network requests, or time-consuming computations.
 
 ### How the Event Loop Works
 

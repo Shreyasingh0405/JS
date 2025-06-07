@@ -39,26 +39,3 @@ parallel(arrayPromise)
 sequential(arrayPromise)
 
 
-  // Example usage:
-  timeout(2000) // Delay of 2000 milliseconds (2 seconds)
-    .then((message) => {
-      console.log(message); // Outputs: Resolved after 2000 milliseconds
-    });
-  
-    //Implement a promise chain where each step transforms the result and passes it to the next promise in the chain. For example, fetch user data, then fetch user posts, then process the posts.
-
-    // Simulated asynchronous function to fetch user data
-function fetchUserData(userId) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            // Simulated user data
-            const userData = {
-                id: userId,
-                name: 'John Doe',
-                age: 30,
-            };
-            resolve(userData);
-        }, 1000); // Simulates network delay
-    });
-}
-

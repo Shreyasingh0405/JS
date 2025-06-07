@@ -25,8 +25,8 @@
 
 let promise = new Promise(function (resolve, reject) {
   // Simulating an asynchronous operation
-  let success = true; // This is just an example condition
-  if (success) {
+  let success  // This is just an example condition
+  if (success==true) {
     resolve("Operation succeeded!");
   } else {
     reject("Operation failed.");

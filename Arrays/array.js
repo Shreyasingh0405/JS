@@ -50,9 +50,9 @@
 
 // // // indexOf() method:The indexOf method searches for the specified value in the array and returns its index.
 
-// let arrs3 = [1, 2, 3, 4, 5];
-// let index1 = arrs3.indexOf(3);
-// console.log(index1); // Output: 2
+let arrs3 = [1, 2, 3, 4, 5];
+let index1 = arrs3.indexOf(3);
+console.log(index1); // Output: 2
 
 // // // slice() method
 // let arrs4 = [1, 2, 3, 4, 5];
@@ -72,9 +72,9 @@
 
 // // // forEach() method:The forEach method iterates over each element in the array and executes the provided function for each element.
 
-let arrs7 = [1, 2, 3, 4, 5];
-arrs7.forEach(num => console.log(num));
-// // arrs7.forEach((num,index,arr)=>{
+// let arrs7 = [1, 2, 3, 4, 5];
+// arrs7.forEach(num => console.log(num));
+// // // arrs7.forEach((num,index,arr)=>{
 // //   arr[index]=num*2
 // // });
 //console.log(arrs7)

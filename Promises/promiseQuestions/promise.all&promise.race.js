@@ -21,3 +21,23 @@ function createPromise(message, delay) {
       console.error("One or more promises failed:", error);
     });
   
+    function allPro(message,delay){
+      return new Promise(function(resolve,reject){
+        setTimeout(function(){
+          resolve(message)
+        },delay)
+      })
+    }
+
+    const check = [
+      allPro("promise 1",6000),
+      allPro("promise2",4000),
+      allPro("pronise3",1000)
+    ]
+
+  Promise.all(check)
+  .then(function(res){
+    console.log(res)
+  }).catch(function(e){
+    console.log(e)
+  })

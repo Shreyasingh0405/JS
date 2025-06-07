@@ -90,3 +90,75 @@ console.log(typeof now)
 
 let regex = /ab+c/;
 console.log(typeof regex)
+
+//set
+const set = new Set([1, 2, 3]);
+
+//map
+const weakMap = new WeakMap();
+const weakSet = new WeakSet();
+
+
+
+//NOTE
+
+
+// ### What is **Reference** in JavaScript?
+
+// * In JavaScript, **primitive values** (like numbers, strings, booleans) store the **actual value** in the variable.
+
+//   * Example:
+
+
+let a = 10;  // 'a' stores the value 10 directly
+    let b = a; // 'b' gets a copy of 10
+    b = b + 5;  // add 5 to b only
+
+    console.log(b)
+    console.log(a)
+
+
+
+
+
+    
+// * But **non-primitive values** (like objects, arrays, functions) store a **reference** to the actual data in memory — not the data itself.
+
+//   * Example:
+
+    let obj1 = { name: "Shreya" };  // obj1 stores a reference to the object in memory
+    let obj2 = obj1;                 // obj2 stores the same reference, NOT a copy of the object
+
+// ### Why do we use or have **References**?
+
+// 1. **Efficiency**
+
+//    * Objects and arrays can be large, so copying the entire data every time would be slow and memory-intensive.
+//    * Instead, JavaScript stores and passes around the **address (reference)** where the data is stored — which is fast and efficient.
+
+// 2. **Shared Access**
+
+//    * When two variables hold the same reference, changing the data via one variable reflects when accessed from the other.
+//    * This allows **sharing and modifying the same object or array** easily without duplication.
+
+// ### Simple Example to Show Reference Behavior
+
+let arr1 = [1, 2, 3];
+let arr2 = arr1;  // arr2 references the same array as arr1
+ arr2= [5,6,7]   // here arr2 is assigned a NEW array — no longer referencing arr1
+
+arr2.push(4);
+
+console.log(arr1);  // Output: [1, 2, 3, 4]
+console.log(arr2);  // Output: [1, 2, 3, 4]
+
+
+// Here, `arr1` and `arr2` both **reference the same array in memory**. So, modifying `arr2` affects `arr1`.
+
+
+// ### Summary
+
+// * **Reference** means the variable stores the location/address of data in memory, not the data itself.
+// * Used for **non-primitive types** to save memory and improve performance.
+// * Allows multiple variables to **access and modify the same data** easily.
+

@@ -27,3 +27,31 @@ task("task 1 is running",1000)
     .finally(function () {
         console.log("task succesfully run")
     })
+
+
+
+    
+    function tasking(success,delay){
+        return new Promise(function(resolve,reject){
+            setTimeout(function(){
+                resolve(success)
+            },delay)
+        })
+    }
+    tasking("one",1000)
+    .then(function(re){
+        console.log(re)
+        return tasking("work done",2000)
+    }).then(function(rem){
+        console.log(rem)
+        return tasking("work done 2",8000)
+    }).then(function(remm){
+        console.log(remm)
+        return tasking("work done 3",5000)
+    }).then(function(resul){
+        console.log(resul)
+    }).catch(function(error){
+        console.log(error)
+    }).finally(function(){
+        console.log("task executed")
+    })
