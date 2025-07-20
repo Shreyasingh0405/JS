@@ -2,7 +2,12 @@
 function withoutClosure() {
     var text = "hii"
     var text1 = "retest"
-    console.log(text1)        // here we can easily print the value of text when it is inside the function
+    
+    function checkingagaun(){
+        console.log(text1)        // here we can easily print the value of text when it is inside the function
+
+    }
+    return checkingagaun()
 }
 // console.log(text1)      //console.log(text1)  ReferenceError: text1 is not defined here we are not able to exec ute the value inside the function
 withoutClosure()
@@ -30,7 +35,7 @@ function withClosure() {
     function executeClosure() {
         console.log(check)
     }
-    executeClosure()
+     executeClosure()
 }
 withClosure()
 
@@ -104,19 +109,19 @@ withClosure()
 
 
 
-function withClosure1() {
-    var check = "hey@123"
-    function executeClosure() {
-        console.log(check)
-    }
-    executeClosure()
+// function withClosure1() {
+//     var check = "hey@123"
+//     function executeClosure() {
+//         console.log(check)
+//     }
+//     executeClosure()
 
-}
-function checking() {
-    console.log("message check")
-}
-checking()
-withClosure1()
+// }
+// function checking() {
+//     console.log("message check")
+// }
+// checking()
+// withClosure1()
 
 
 

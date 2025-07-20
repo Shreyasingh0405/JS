@@ -157,3 +157,16 @@ counter(); // 3
 
 // Even though `setupButton` is done executing, the event listener **remembers** `clicks` because of closure.
 
+
+function once(){
+  const m =100
+  function tyestung(){
+  var n = 90
+  function test(){
+    console.log(m)
+  }
+  test()
+}
+tyestung()
+}
+once()

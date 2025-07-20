@@ -21,14 +21,14 @@ console.log("go to hell")
 
 //=================******************===================//
 
-const cart =["shoes","earrings","pants"]
-api.createOrder(cart,function(){
-    api.proceedPayment(function(){
-        api.showOrderSummary(function(){
-            api.updateTheWallet()
-        })
-    })
-})
+// const cart =["shoes","earrings","pants"]
+// api.createOrder(cart,function(){
+//     api.proceedPayment(function(){
+//         api.showOrderSummary(function(){
+//             api.updateTheWallet()
+//         })
+//     })
+// })
 
 //because of structure it is known as pyramid of doom.
 
@@ -38,3 +38,36 @@ api.createOrder(cart,function(){
 
 //Inversion Ofcontrol
 //The callback function is passed another callback, due to which we loose control on our ConvolverNode.We donot know what happening behind the scene and the code became difficult to MediaStreamAudioDestinationNode.That process called inversion control.
+
+const cart=["pen","ps5","shirt"]
+const api={
+    createOrder:function(cart,callback){
+        setTimeout(()=>{
+            console.log("cart created",cart)
+            callback()
+        },1000)
+        
+    },
+    proceedPayment: function(callback){
+        setTimeout(()=>{
+            console.log("payment done")
+            callback()
+        },2000)
+        
+    },
+    showhistory: function(callback){
+        setTimeout(()=>{
+            console.log("show history")
+            callback()
+        })
+        
+    }
+}
+
+api.createOrder(cart,function(){
+    api.proceedPayment(function(){
+        api.showhistory(function(){
+            console.log("done")
+        })
+    })
+})

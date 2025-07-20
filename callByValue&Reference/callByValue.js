@@ -55,3 +55,17 @@ console.log("After function call:", myObj); // Output: { name: 'Updated Name' }
 // Call by Reference: Used with reference types (e.g., objects, arrays).
 // Shallow Copy: Useful when you want to copy an object but can accept shared references for nested objects.
 // Deep Copy: Used when you need a completely independent copy of an object and its nested structures.
+
+
+let x1 = 5
+let y1 = x1
+const resss = y1+7
+console.log(resss)
+console.log(x1)
+
+
+let array = ["1","2","3"]
+let array1 = array
+const res11 = array1.push("mango")
+console.log(array1)
+ console.log(array)

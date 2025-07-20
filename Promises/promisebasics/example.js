@@ -87,3 +87,21 @@ const p1 = new Promise((resolve, reject) => {
 //     /                    \
 // resolve                  reject
 // (success, fulfilled)   (failure, rejected)
+
+
+
+
+const p11 = new Promise((resolve,reject)=>{
+  setTimeout(()=>(resolve("succ of p11"),1000))
+})
+
+const p22 = new Promise((resolve,reject)=>{
+  setTimeout(()=>(reject("failure of p22"),5000))
+})
+Promise.any([p11,p22])
+.then((ress)=>{
+  console.log(ress)
+})
+.catch((err)=>{
+  console.log(err)
+})

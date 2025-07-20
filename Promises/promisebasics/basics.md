@@ -23,7 +23,7 @@ Sure! Here are the notes summarizing the key points about Promises in JavaScript
    - Promises can be chained to handle multiple asynchronous operations sequentially.
 
 #### Example of Promise Usage
-```javascript
+
 const createOrder = (cart) => {
     return new Promise((resolve, reject) => {
         // Simulate async operation

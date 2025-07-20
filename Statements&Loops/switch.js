@@ -23,7 +23,7 @@
 // }
 
 
-let day = 6;
+let day = 9;
 
 switch(day){
     case 0:
@@ -49,4 +49,9 @@ switch(day){
         break;
     default:
         console.log("Invalid Day");
+}
+
+for(let i =0;i<5;i++){
+   if(i===3) continue
+    console.log(i)
 }

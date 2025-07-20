@@ -76,3 +76,27 @@ function greet(greeting, name) {
 
 // persons.greet(); // Output: "Hello, my name is undefined" (or an error in strict mode)
  
+
+
+let name={
+  firstName : "shree",
+  SecondName : "Singh",
+  fullName:function(Hometown){
+    console.log(this.firstName + " " + this.SecondName + " "+ "from"+ " " + Hometown)
+  }
+}
+name.fullName("patna")
+
+//call method
+
+let name2={
+  firstName :" sai",
+  SecondName: "surya"
+}
+name.fullName.call(name2,"Bihar")
+
+name.fullName.apply(name2,["Bihar"])
+
+ let myNamew = name.fullName.bind(name2,"Bihar")
+ console.log(myNamew)
+ myNamew()

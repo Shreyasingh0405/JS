@@ -10,27 +10,27 @@ function print(){
 print()
 
 
-function print1(){
-    for(let i =1;i<=5;i++){
-        setTimeout(function(){
-            console.log(i)
- },i*1000)
-    }
-}
-print1()
+// function print1(){
+//     for(let i =1;i<=5;i++){
+//         setTimeout(function(){
+//             console.log(i)
+//  },i*1000)
+//     }
+// }
+// print1()
 
 
-function print2(){
-    for(var i =1;i<=5;i++){
-        function close(i){
-            setTimeout(function(){
-                console.log(i)
-     },i*1000)
-        }
-        close(i)
-    }
-}
-print2()
+// function print2(){
+//     for(var i =1;i<=5;i++){
+//         function close(i){
+//             setTimeout(function(){
+//                 console.log(i)
+//      },i*1000)
+//         }
+//         close(i)
+//     }
+// }
+// print2()
 
 
 

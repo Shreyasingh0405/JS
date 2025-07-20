@@ -39,7 +39,6 @@ console.log(ka)
 
 
 
-
 // 4. Shadowing of variables using var, let and const.
 
 // 5. The shadow should not cross the scope of original otherwise it will give error.
@@ -78,3 +77,17 @@ console.log(x); // Prints 10
 
 // Scope for arrow function is also same!
 
+
+
+
+var testing = 900000
+let testing1 = 9090000
+{
+    var testing = 80
+    let testing1 = 89
+    console.log(testing)
+    console.log(testing1)
+
+}
+console.log(testing)
+console.log(testing1)

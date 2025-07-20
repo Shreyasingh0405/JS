@@ -157,3 +157,10 @@ async function fetchWithContinuedExecution() {
         console.error('Failed to fetch data2:', error);
     }
 }
+
+
+async function testing(){
+  const check = await fetch("https://jsonplaceholder.typicode.com/users")
+  console.log(check)
+}
+testing()
